@@ -1,0 +1,91 @@
+<h2>Ajouter un produit sucré</h2>
+<div class="container">
+  <form [formGroup]="sweetForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Nom du produit</label>
+      <input id="name" formControlName="name" class="form-control">
+      @if (sweetForm.get('name')?.invalid && sweetForm.get('name')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('name')?.errors?.['required']) {
+            Le nom du produit est requis.
+          } @else if (sweetForm.get('name')?.errors?.['pattern']) {
+            Le nom doit commencer par une lettre majuscule.
+          }
+        </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="photo" class="form-label">URL de la photo</label>
+      <input id="photo" formControlName="photo" class="form-control">
+      @if (sweetForm.get('photo')?.invalid && sweetForm.get('photo')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('photo')?.errors?.['required']) {
+            L'URL de la photo est requise.
+          }
+        </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="price" class="form-label">Prix</label>
+      <input id="price" type="number" formControlName="price" class="form-control" min="0">
+      @if (sweetForm.get('price')?.invalid && sweetForm.get('price')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('price')?.errors?.['required']) {
+            Le prix est requis.
+          } @else if (sweetForm.get('price')?.errors?.['min']) {
+            Le prix ne peut pas être inférieur à 0.
+          }
+        </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="datecreation" class="form-label">Date de création</label>
+      <input id="datecreation" type="date" formControlName="datecreation" class="form-control">
+      @if (sweetForm.get('datecreation')?.invalid && sweetForm.get('datecreation')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('datecreation')?.errors?.['required']) {
+            La date de création est requise.
+          }
+        </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Catégorie</label>
+      <input id="category" formControlName="category" class="form-control">
+      @if (sweetForm.get('category')?.invalid && sweetForm.get('category')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('category')?.errors?.['required']) {
+            La catégorie est requise.
+          }
+        </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="weight" class="form-label">Poids</label>
+      <input id="weight" type="number" formControlName="weight" class="form-control" min="0">
+      @if (sweetForm.get('weight')?.invalid && sweetForm.get('weight')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('weight')?.errors?.['required']) {
+            Le poids est requis.
+          } @else if (sweetForm.get('weight')?.errors?.['min']) {
+            Le poids ne peut pas être inférieur à 0.
+          }
+        </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="quantite" class="form-label">Quantité</label>
+      <input id="quantite" type="number" formControlName="quantite" class="form-control" min="1">
+      @if (sweetForm.get('quantite')?.invalid && sweetForm.get('quantite')?.touched) {
+        <div class="text-danger">
+          @if (sweetForm.get('quantite')?.errors?.['required']) {
+            La quantité est requise.
+          } @else if (sweetForm.get('quantite')?.errors?.['min']) {
+            La quantité ne peut pas être inférieure à 1.
+          }
+        </div>
+      }
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+  </form>
+</div>

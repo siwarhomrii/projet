@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+@if (cart.items.length>0) {
+<div class="container">
+<ul class="list-group">
+    @for (item of cart.items; track item.sweet.id) {
+      <li class="list-group-item">
+        <div>
+          <img [src]="item.sweet.photo" alt="{{ item.sweet.name }}">
+        </div>
+        <div>
+          <a [routerLink]="['/sweets', item.sweet.id]">
+            {{ item.sweet.name }}
+          </a>
+        </div>
+        <div>
+          <input type="number"
+                 [value]="item.quantite"
+                 min="1"
+                 max="{{ item.sweet.quantite }}"
+                 #quantityInput>
+          <button (click)="onChangeQuantity(item.sweet.id, quantityInput.valueAsNumber)" class="btn">Valider</button>
+        </div>
+        <div >
+          {{item.price}}DT pour:{{item.quantite}}kg
+        </div>
+        <div>
+            <button class="btn" (click)="OnRemoveFromCart(item.sweet.id,item)">
+                <i class="bi bi-eraser"></i>
+              Remove
+            </button>
+          </div>
+      </li>
+    }
+  </ul>
+   
+    <div class="total-price">{{cart.totalPrice| number:'.3'}}DNT ( +frais de livraison:
+      @if (distance>10) {
+        7DT
+      }@else{
+        3DT
+      })
+  </div>
+  <div class="d-flex justify-content-end" style="margin-top: 20px;"> <button (click)="onPlaceOrder()" class="btn btn-outline-secondary" >confirmer</button></div>
+  <div class="d-flex justify-content-center">
+</div>
+</div>}@else {
+  <h1 style="text-align: center;">Désole,aucun produit selectionné<i class="bi bi-emoji-frown"></i></h1>}
+  <button routerLink="/sweets" id="retour" style="position: relative; left: 550px;"><i class="bi bi-arrow-bar-up"></i>Retour</button>

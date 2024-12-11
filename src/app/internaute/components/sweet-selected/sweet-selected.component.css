@@ -1,0 +1,143 @@
+.card{
+  height: auto;
+  
+}
+form {
+  position: relative;
+  left: 10%;
+  
+}
+
+form button {
+  position: relative;
+  left: 10px;
+}
+
+input {
+  border: 0.5px solid;
+  border-color: rgb(183, 184, 185);
+  height: 20;
+  position: relative;
+ 
+}
+
+textarea {
+  width: 200px;
+}
+
+#retour {
+  width: 200px;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+  background-color: #e72991;
+  color: white;
+  opacity: 0.7;
+  outline: none;
+  margin-top: 20px;
+  position: relative;
+  left: 40%;
+  
+}
+
+#comment {
+  cursor: pointer;
+}
+
+#comment:hover {
+  text-shadow: 0 4px 8px rgba(128, 146, 145, 0.5);
+  color: #5191c9;
+}
+
+.comment-form {
+  position: relative;
+  right: 100px;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.comment-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.comment-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 15px rgba(206, 199, 191, 0.7);
+    opacity: 1;
+  }
+
+  50% {
+    text-shadow: 0 0 25px rgb(138, 134, 136);
+    opacity: 0.8;
+  }
+
+  100% {
+    text-shadow: 0 0 15px rgba(235, 91, 163, 0.392);
+    opacity: 1;
+  }
+}
+
+p {
+  animation: pulse 1.5s infinite;
+}
+
+.card-body {
+  position: relative;
+  top: 20px;
+  font-size: 1.2em;
+  left: 50px;
+  bottom: 50px;
+}
+.btn-secondary{
+  position: relative;
+  bottom: 2px;
+}
+li{
+  list-style: none;
+}
+.list-group-item{
+  width: 70%;
+}
+.bi-heart-fill {
+  color: red;
+}
+#card2 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+}

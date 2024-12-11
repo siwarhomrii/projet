@@ -1,0 +1,36 @@
+<div style="display: flex; flex-direction: row; justify-content: flex-end; align-items: flex-start; background-color: #eeeded;">
+    <div class="container mt-3" style="width: 70px;">
+        <nav class="vertical-nav ">
+            <ul class="navbar-nav" style="display: flex; justify-content: space-around;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/layout/products">
+                        <i class="bi bi-house-door"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/layout/orders">
+                        <i class="bi bi-list-columns-reverse"></i>
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link" routerLink="/layout/modify-password">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/layout/add-product">
+                        <i class="bi bi-plus-circle"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="onDisconnect()">
+                        <i class="bi bi-box-arrow-left"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div style="flex: 2; margin-left: 70px; margin-top: 70px;">
+        <router-outlet></router-outlet>
+    </div>
+</div>

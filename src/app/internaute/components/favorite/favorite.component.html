@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <ul class="list-group">
+        @for (item of liste; track item.id) {
+          <li class="list-group-item">
+            <div>
+              <img [src]="item.photo" alt="{{ item.name }}">
+            </div>
+            <div>
+              <a [routerLink]="['/sweets', item.id]">
+                {{ item.name }}
+              </a>
+            </div>
+            <div >
+              {{item.price}}DT
+            </div>
+            <div>
+                <button class="btn" (click)="OnRemoveFromFavorite(item)">
+                    <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+          </li>
+        }
+      </ul>
+      <div class="d-flex justify-content-center">
+      <button routerLink="/sweets" id="retour" ><i class="bi bi-arrow-bar-up"></i>Retour</button>
+    </div>
+    </div>

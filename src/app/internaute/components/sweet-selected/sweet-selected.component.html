@@ -1,0 +1,90 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img [src]="sweet.photo" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+        <ul>
+          <li><h4 class="card-title">{{sweet.name}}<i [ngClass]="{
+            'bi bi-heart-fill': sweet.favorite,
+            'bi bi-heart': !sweet.favorite
+        }" (click)="onChangeLikeStatus(sweet)" style="position: relative;  left: 10px;"></i></h4></li>
+          <span class="card-text">
+              <li><h5 style="color: rgb(233, 69, 156);">{{sweet.price|number:'.3'}} dt</h5></li>
+              <li style="color: rgb(148, 143, 143); margin-top: 30px; ">
+                {{sweet.weight|nombrepiece}}
+              </li>
+              <li>Date creation:{{sweet.date_creation}}</li>
+          </span>
+        </ul>
+          <form [formGroup]="quantiteForm">
+          <input type="number" name="" id="" formControlName="quantite" min="1" [max]="sweet.quantite">
+            <button type="button" class="btn btn-secondary" (click)="onAddCart(sweet)">ajouter panier</button>
+          </form>
+          <li (click)="display()" id="comment">affiche les commentaires</li>
+          @if (test) {
+            <ul class="list-group">
+              @for (item of sweet.comments; track $index) {
+                <li class="list-group-item">Le <span style="font-weight: bold;">{{ item.date_comment|date: 'dd/MM/yyyy' }}</span> {{ item.user_name}} :"{{ item.message }}"
+                </li>
+              }
+              @if (sweet.comments?.length==0) {
+                <p style="position: relative; left: 50px; color: rgb(223, 94, 94); text-decoration: underline;"> <i class="bi bi-folder-x"></i> aucun commentaire trouvé</p>
+              }
+            </ul>
+            <p (click)="onDisplayCommentZone()">voulez vous ajouter un commentaire?</p>
+          @if (vue) {
+          <div [formGroup]="commentForm" class="comment-form">
+            <label>danner votre nom: <span style="color: red;">*</span></label><input type="text" formControlName="user"><br>
+            @if(isRequeried()){
+              <div class="alert alert-warning">
+                  ce champ est obligatoire
+              </div>
+          }
+            <label>ecrire commentaire:<span style="color: red;">*</span> </label><textarea formControlName="comment"></textarea>
+            @if(isRequeried1()){
+              <div class="alert alert-warning">
+                  ce champ est obligatoire
+              </div>
+          }
+            <button class="btn btn-primary" (click)="onAddComment(sweet)">valider</button>
+          </div>
+          }
+        }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row text-center" style="width: 800px; position: relative; left: 350px;">
+    <div class="col-md-4 mb-3">
+      <div class="card p-3 border-light shadow-sm" style="background-color: #f9f9f9; font-size: 0.8rem;">
+        <i class="bi bi-truck display-6 text-secondary"></i>
+        <h4 class="mt-3">Livraison</h4>
+        <p>Livraison à domicile dans toute <br> la Tunisie entre 24 heures et 72 heures</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3 border-light shadow-sm" style="background-color: #f9f9f9; font-size: 0.8rem;">
+        <i class="bi bi-shield-lock display-6 text-secondary"></i>
+        <h4 class="mt-3">Paiement sécurisé</h4>
+        <p>Par carte bancaire, ou en paiement à la livraison</p>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card p-3 border-light shadow-sm" style="background-color: #f9f9f9; font-size: 0.8rem;">
+        <i class="bi bi-headset display-6 text-secondary"></i>
+        <h4 class="mt-3">Service client</h4>
+        <p>
+          Toujours disponible<br>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content">
+    <button routerLink="/sweets" id="retour" ><i class="bi bi-arrow-bar-up"></i>Retour</button>
+  </div>
+  

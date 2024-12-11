@@ -1,0 +1,346 @@
+{
+  "gateaux": [
+    {
+      "id": "1",
+      "name": "Datte farcie aux noisettes",
+      "photo": "photos/photo1.jpg",
+      "price": 75,
+      "favorite": true,
+      "date_creation": "14/11/2024",
+      "quantite": 8,
+      "category": "Traditionnelle",
+      "weight": 20,
+      "comments": [
+        {
+          "user_name": "ons",
+          "date_comment": "2024-11-20T11:25:11.713Z",
+          "message": "magnifique!"
+        },
+        {
+          "user_name": "ahmed",
+          "date_comment": "2024-11-20T11:31:31.643Z",
+          "message": "délicieuse"
+        },
+        {
+          "user_name": "ali",
+          "date_comment": "2024-11-20T11:43:03.319Z",
+          "message": "très original"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Macaron Chocolat",
+      "photo": "photos/photo3.jpg",
+      "price": 110,
+      "favorite": false,
+      "date_creation": "2024-11-24",
+      "category": "Macaron",
+      "weight": 14,
+      "comments": [],
+      "quantite": 20
+    },
+    {
+      "id": "7",
+      "name": "Macaron Fraise",
+      "photo": "photos/photo7.jpg",
+      "price": 110,
+      "favorite": true,
+      "date_creation": "2024-11-25",
+      "category": "Macaron",
+      "weight": 14,
+      "comments": [],
+      "quantite": 15
+    },
+    {
+      "id": "8",
+      "name": "Macaron Citron",
+      "photo": "photos/photo5.jpg",
+      "price": 110,
+      "favorite": false,
+      "date_creation": "2024-11-24",
+      "category": "Macaron",
+      "weight": 14,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "9",
+      "name": "Datte farcie aux amandes",
+      "photo": "photos/photo2.jpg",
+      "price": 70,
+      "favorite": false,
+      "date_creation": "2024-11-23",
+      "category": "Traditionnelle",
+      "weight": 20,
+      "comments": [],
+      "quantite": 7
+    },
+    {
+      "id": "10",
+      "name": "Couronne pistache",
+      "photo": "photos/corne3.avif",
+      "price": 104,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Mignardise",
+      "weight": 16,
+      "comments": [],
+      "quantite": 8
+    },
+    {
+      "id": "11",
+      "name": "Couronne amande",
+      "photo": "photos/corne1.avif",
+      "price": 120,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Mignardise",
+      "weight": 16,
+      "comments": [],
+      "quantite": 9
+    },
+    {
+      "id": "12",
+      "name": "Tartine amande",
+      "photo": "photos/tartine2.avif",
+      "price": 135,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Mignardise",
+      "weight": 16,
+      "comments": [],
+      "quantite": 8
+    },
+    {
+      "id": "13",
+      "name": "Tartine noisette",
+      "photo": "photos/tartine.avif",
+      "price": 160,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Mignardise",
+      "weight": 16,
+      "comments": [],
+      "quantite": 8
+    },
+    {
+      "id": "14",
+      "name": "Tartine pistache",
+      "photo": "photos/tartine3.avif",
+      "price": 180,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Mignardise",
+      "weight": 16,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "15",
+      "name": "Mignardise Pistache Framboise ",
+      "photo": "photos/min1.avif",
+      "price": 200,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Mignardise",
+      "weight": 16,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "16",
+      "name": "Boulette Chocolat Amande Noisette",
+      "photo": "photos/chocolat1.jpg",
+      "price": 65,
+      "favorite": false,
+      "date_creation": "2024-11-26",
+      "category": "Chocolat",
+      "weight": 16,
+      "comments": [],
+      "quantite": 8
+    },
+    {
+      "id": "17",
+      "name": "Perle Noisette Chocolat au Lait",
+      "photo": "photos/chocolat2.webp",
+      "price": 190,
+      "favorite": false,
+      "date_creation": "2024-11-26",
+      "category": "Chocolat",
+      "weight": 16,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "18",
+      "name": "Perle Noisette Chocolat Blanc",
+      "photo": "photos/chocolat4.webp",
+      "price": 190,
+      "favorite": false,
+      "date_creation": "2024-11-26",
+      "category": "Chocolat",
+      "weight": 16,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "19",
+      "name": "Perle Noisette Caramel ",
+      "photo": "photos/chocolat3.webp",
+      "price": 190,
+      "favorite": true,
+      "date_creation": "2024-11-25",
+      "category": "Chocolat",
+      "weight": 16,
+      "comments": [],
+      "quantite": 5
+    },
+    {
+      "id": "20",
+      "name": "Samsa Pistache",
+      "photo": "photos/samsa.webp",
+      "price": 110,
+      "favorite": false,
+      "date_creation": "2024-11-25",
+      "category": "Traditionnelle",
+      "weight": 22,
+      "comments": [],
+      "quantite": 5
+    }
+  ],
+  "admin": {
+    "userName": "admin",
+    "password": "Admin123"
+  },
+  "commandes": [
+    {
+      "id": "1001",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "9",
+              "name": "Datte farcie aux amandes",
+              "photo": "photos/photo2.jpg",
+              "price": 70,
+              "favorite": false,
+              "date_creation": "2024-11-23",
+              "category": "Traditionnelle",
+              "weight": 20,
+              "comments": [],
+              "quantite": 7
+            },
+            "quantite": 1,
+            "price": 70
+          }
+        ],
+        "totalPrice": 73
+      }
+    },
+    {
+      "id": "1002",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "7",
+              "name": "Macaron Fraise",
+              "photo": "photos/photo7.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-25",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 7
+            },
+            "quantite": 1,
+            "price": 110
+          },
+          {
+            "sweet": {
+              "id": "12",
+              "name": "Tartine amande",
+              "photo": "photos/tartine2.avif",
+              "price": 135,
+              "favorite": false,
+              "date_creation": "2024-11-25",
+              "category": "Mignardise",
+              "weight": 16,
+              "comments": [],
+              "quantite": 8
+            },
+            "quantite": 1,
+            "price": 135
+          }
+        ],
+        "totalPrice": 248
+      }
+    },
+    {
+      "id": "1003",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "1",
+              "name": "Datte farcie aux noisettes",
+              "photo": "photos/photo1.jpg",
+              "price": 75,
+              "favorite": true,
+              "date_creation": "14/11/2024",
+              "quantite": 11,
+              "category": "traditionelle",
+              "weight": 20,
+              "comments": [
+                {
+                  "user_name": "ons",
+                  "date_comment": "2024-11-20T11:25:11.713Z",
+                  "message": "magnifique!"
+                },
+                {
+                  "user_name": "ahmed",
+                  "date_comment": "2024-11-20T11:31:31.643Z",
+                  "message": "délicieuse"
+                },
+                {
+                  "user_name": "ali",
+                  "date_comment": "2024-11-20T11:43:03.319Z",
+                  "message": "très original"
+                }
+              ]
+            },
+            "quantite": 3,
+            "price": 225
+          }
+        ],
+        "totalPrice": 228
+      }
+    },
+    {
+      "id": "1004",
+      "sweets": {
+        "items": [
+          {
+            "sweet": {
+              "id": "4",
+              "name": "Macaron Chocolat",
+              "photo": "photos/photo3.jpg",
+              "price": 110,
+              "favorite": false,
+              "date_creation": "2024-11-24",
+              "category": "Macaron",
+              "weight": 14,
+              "comments": [],
+              "quantite": 20
+            },
+            "quantite": 2,
+            "price": 220
+          }
+        ],
+        "totalPrice": 223
+      }
+    }
+  ]
+}

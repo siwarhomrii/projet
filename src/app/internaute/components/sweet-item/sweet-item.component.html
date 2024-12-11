@@ -1,0 +1,14 @@
+<div class="card" id="zone">
+  <img class="card-img-top" [src]="sweet.photo" alt="{{ sweet.name }} image"><a [routerLink]="['/sweets', sweet.id]"><i class="bi bi-three-dots-vertical"></i></a>
+  <div class="card-body">
+      <h5 class="card-title">
+          {{ sweet.name }}
+          <i [ngClass]="{
+              'bi bi-heart-fill': sweet.favorite,
+              'bi bi-heart': !sweet.favorite
+          }" (click)="onChangeLikeStatus(sweet)"></i>
+      </h5>
+      <p class="card-text">{{ sweet.price}} dt</p>
+      <button type="button" [routerLink]="['/sweets', sweet.id]"><i class="bi bi-cart4"></i>commander</button>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="card" id="zone">
+    <img [src]="sweet.photo" class="card-img-top" alt="{{ sweet.name }}">
+    <div class="card-body">
+        <h5  
+        [ngClass]="{ 
+            'card-title':true,
+            'text-decoration-line-through text-danger': sweet.quantite == 0}">
+        {{ sweet.name }}
+    </h5>
+      @if(isEditing){
+      <div [formGroup]="modifyForm" >
+        <div class="form-group">
+          <label for="price">Prix (TND)</label>
+          <input
+            id="price"
+            type="number"
+            class="form-control"
+            formControlName="price"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantite">Quantité</label>
+          <input
+            id="quantite"
+            type="number"
+            class="form-control"
+            formControlName="quantite"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantite">URL photo</label>
+          <input
+            id="url"
+            type="text"
+            class="form-control"
+            formControlName="URL"
+          />
+        </div>
+        <button class="btn btn-success" (click)="onSave()">Enregistrer</button>
+        <button class="btn btn-secondary" (click)="onCancel()">Annuler</button>
+      </div>
+    }
+       @else{
+      <div >
+        <p class="card-text">Prix : {{ sweet.price }} TND</p>
+        <p class="card-text">Quantité : {{ sweet.quantite }}</p>
+        <button class="btn btn-primary" (click)="onEdit()">Modifier</button>
+        <button class="btn btn-danger" (click)="onDelete()">Supprimer</button>
+      </div>
+    }
+    </div>
+  </div>
+  

@@ -1,0 +1,48 @@
+#zone {
+    width: 300px;
+    height: 300px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    height: auto;
+    
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
+.bi-heart-fill {
+    color: red;
+}
+
+img {
+    width: 180px;
+    height: auto; 
+    margin-bottom: 10px; 
+}
+.bi-three-dots-vertical{
+    position: relative;
+    left: 120px;
+    bottom: 150px;
+    color: grey;
+
+}
+button{
+    width: 200px;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.5rem;
+    background-color: #e72991;
+    color: white;
+    opacity: 0.7;
+    outline: none;
+    margin-top: 5px;
+  }

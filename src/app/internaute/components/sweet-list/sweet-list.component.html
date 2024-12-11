@@ -1,0 +1,12 @@
+<app-navbar (onClick)="onLoadCategory($event)"></app-navbar>
+<app-search-client (onClick)="onLoadName($event)"></app-search-client>
+@if(sweets.length>0){
+<ul>
+    @for (item of sweets; track item.id) {
+        @if(item.quantite>0){
+        <app-sweet-item [sweet]="item"></app-sweet-item>
+        }
+    }
+</ul>
+}@else {
+<h1 style="text-align: center;">Désole,pas trouvé<i class="bi bi-emoji-frown"></i></h1>}

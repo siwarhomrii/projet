@@ -1,0 +1,9 @@
+<app-search-bar (onClick)="onSearch($event)"></app-search-bar>
+<ul class="row">
+    @for( item of sweets; track item.id)
+    {
+      <li class="col-4" style="list-style: none;" >
+        <app-product-item [sweet]="item" (delete)="deleteSweet($event)" (update)="updateSweet($event)" ></app-product-item>
+      </li>
+    }
+</ul>
